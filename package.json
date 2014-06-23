@@ -16,7 +16,8 @@
     "atom": ">0.50.0"
   },
   "dependencies": {
-    "less": "^1.7.0"
+    "less": "^1.7.0",
+    "loophole": "^1.0.0"
   },
   "readmeFilename": "README.md",
   "bugs": {
