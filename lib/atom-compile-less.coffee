@@ -3,6 +3,9 @@
 less = require "less"
 fs   = require "fs"
 path = require "path"
+# loophole fix
+# thanks to yhsiang http://discuss.atom.io/t/atom-content-security-policy-error/4425/5
+{Function} = require "loophole"
 
 # HELPER FUNCTIONS
 
@@ -34,6 +37,9 @@ compileFile = (filepath) ->
 
         )
 
+      #loophole fix
+      global.Function = Function
+
       )
 
 atomCompileLess = ->
@@ -56,8 +62,6 @@ atomCompileLess = ->
       # COMPILE FILE
       compileFile currentFilePath
       compileFile projectMainLess if includeMainFile
-
-
 
 
 # MODULE EXPORT
