@@ -70,7 +70,7 @@ module.exports =
 
   configDefaults:
     mainLessFile:     "/main.less",
-    compileMainFile:  true
+    compileMainFile:  true,
     compressCss:      true
 
   activate: (state) =>
