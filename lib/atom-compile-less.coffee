@@ -37,9 +37,6 @@ compileFile = (filepath) ->
 
         )
 
-      #loophole fix
-      global.Function = Function
-
       )
 
 atomCompileLess = ->
@@ -62,6 +59,9 @@ atomCompileLess = ->
       # COMPILE FILE
       compileFile currentFilePath
       compileFile projectMainLess if includeMainFile
+
+      #loophole fix
+      global.Function = Function
 
 
 # MODULE EXPORT
