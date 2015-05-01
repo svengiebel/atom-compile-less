@@ -19,6 +19,7 @@ getFileContents = (filePath, callback) ->
 
 compileFile = (filepath) ->
   outputCompressed = atom.config.get('atom-compile-less.compressCss')
+  showSuccessMessage = atom.config.get('atom-compile-less.showSuccessMessage')
 
   # COMPILE LESS TO CSS
   getFileContents filepath, (content) ->
@@ -32,8 +33,14 @@ compileFile = (filepath) ->
 
       # SAVE COMPILED FILE
       fs.writeFile( cssFilePath, outputCss, (err) ->
-        console.log "FAILED TO COMPILE LESS: " + cssFilePath, err if err
-        console.log "LESS FILE COMPILED TO: " + cssFilePath
+
+        if showSuccessMessage
+          fileName = cssFilePath.split('/')
+          fileName = fileName[fileName.length-1]
+          message = 'File <strong>' + fileName + '</strong> compiled! Yeih!'
+          atom.notifications.addSuccess message
+        # console.log "FAILED TO COMPILE LESS: " + cssFilePath, err if err
+        # console.log "LESS FILE COMPILED TO: " + cssFilePath
 
         )
 
@@ -71,7 +78,8 @@ module.exports =
   configDefaults:
     mainLessFile:     "/main.less",
     compileMainFile:  true,
-    compressCss:      true
+    compressCss:      true,
+    showSuccessMessage: true
 
   activate: (state) =>
     atom.workspaceView.command "core:save", => atomCompileLess()
