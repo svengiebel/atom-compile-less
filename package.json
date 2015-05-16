@@ -1,7 +1,7 @@
 {
   "name": "atom-compile-less",
   "main": "./lib/atom-compile-less",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "description": "Just a Atom.io Package for compiling LESS-Files to CSS-Files with some neat settings.",
   "activationEvents": [
