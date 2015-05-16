@@ -48,7 +48,7 @@ compileFile = (filepath) ->
 
 atomCompileLess = ->
 
-  currentEditor = atom.workspace.getActiveEditor()
+  currentEditor = atom.workspace.getActiveTextEditor()
 
   if currentEditor
 
