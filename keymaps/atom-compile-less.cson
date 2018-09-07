@@ -1,0 +1,5 @@
+{
+  'atom-text-editor[data-grammar="source css less"]': {
+    "cmd-s": "atom-compile-less:compile"
+  }
+}

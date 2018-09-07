@@ -1,0 +1,30 @@
+atom-panel.modal {
+  margin-top: 5em;
+  display: inline-flex;
+  flex-direction: column;
+  width: auto;
+  opacity: 0.95;
+}
+atom-panel.modal div.atom-compile-less {
+  background-color: #8DC149;
+  padding: 2em;
+  border: 1em solid black;
+  font-weight: 600;
+}
+atom-panel.modal div.atom-compile-less h1#success {
+  font-size: 3em;
+  color: blue;
+  font-weight: 900;
+  line-height: 0.5em;
+}
+atom-panel.modal div.atom-compile-less h2#file {
+  font-size: 2em;
+  color: black;
+  line-height: 1em;
+}
+atom-panel.modal div.atom-compile-less h3#directory {
+  font-size: 1.5em;
+  color: white;
+  white-space: nowrap;
+  line-height: 0.5em;
+}

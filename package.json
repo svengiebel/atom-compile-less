@@ -1,12 +1,12 @@
 {
   "name": "atom-compile-less",
   "main": "./lib/atom-compile-less",
-  "version": "0.12.0",
+  "version": "1.0.0-pre1",
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
-  "description": "Just a Atom.io Package for compiling LESS-Files to CSS-Files with some neat settings.",
+  "description": "Configurable Less to CSS on save. Optionally generates sourcemaps and creates visual notifications on success or error.",
   "activationCommands": {
-    "atom-text-editor": [
-      "core:save"
+    "atom-workspace": [
+      "atom-compile-less:compile"
     ]
   },
   "repository": {
@@ -18,12 +18,11 @@
     "atom": ">0.50.0"
   },
   "dependencies": {
-    "less": "^1.7.0",
-    "loophole": "^1.0.0"
+    "less": "^1.7.0"
   },
   "readmeFilename": "README.md",
   "bugs": {
-    "url": "https://github.com/freshl/atom-compile-less/issues"
+    "url": "https://github.com/Asher-/atom-compile-less/issues"
   },
-  "homepage": "https://github.com/freshl/atom-compile-less"
+  "homepage": "https://github.com/Asher-/atom-compile-less"
 }
