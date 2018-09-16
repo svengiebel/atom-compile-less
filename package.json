@@ -18,7 +18,8 @@
     "atom": ">0.50.0"
   },
   "dependencies": {
-    "less": "^1.7.0"
+    "less": "^3.8.1",
+    "node-fs": "^0.1.7"
   },
   "readmeFilename": "README.md",
   "bugs": {
