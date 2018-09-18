@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Compile atom-compile-less",
+        "command": "atom-compile-less:compile"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "atom-compile-less",
+          "submenu": [
+            {
+              "label": "Compile",
+              "command": "atom-compile-less:compile"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
